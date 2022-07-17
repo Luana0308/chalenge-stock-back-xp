@@ -3,7 +3,6 @@ const { messageErrorTokenInvalid } = require('../utils/messagesErrors')
 
 const authToken = (req, res, next) => {
   const token = req.headers.authorization
-  console.log('entrou aqui @', token)
 
   const payload = authenticateToken(token)
   if (!payload) {

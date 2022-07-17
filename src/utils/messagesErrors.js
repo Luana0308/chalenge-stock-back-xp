@@ -8,10 +8,13 @@ const messageErrorTokenInvalid = { status: 401, message: 'Expired or invalid tok
 
 const messageErrorAssetNotExist = { status: 404, message: 'Asset does not exist' }
 
+const messageErrorValueInvalid = { status: 400, message: 'value must be at least greater than 0' }
+
 module.exports = {
   messageErrorMissingFields,
   messageErrorInvalidFields,
   messageErrorToken,
   messageErrorTokenInvalid,
-  messageErrorAssetNotExist
+  messageErrorAssetNotExist,
+  messageErrorValueInvalid
 }

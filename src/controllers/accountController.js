@@ -6,7 +6,13 @@ const getByIdClientValue = async (req, res) => {
   res.status(200).json(result)
 }
 
+const postDepositClient = async (req, res) => {
+  const result = await service.postDepositClient(res.locals.payload, req.body)
+  res.status(200).json(result)
+}
+
 module.exports = {
-  getByIdClientValue
+  getByIdClientValue,
+  postDepositClient
 
 }
