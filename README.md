@@ -12,13 +12,13 @@ Docker
 3 - Nodemon
 4 - Chai
 5 - Mocha
-6 - AssyncErros
+6 - Express AssyncErros
 7 - Sinon
-8 - Sqlize
+8 - Sequelize
 9 - Dotenv
 10 - CommitLint
 11 - Prettier
-12 - Husk
+12 - Husky
 13 - Eslint
 14 - Mysql2
 15 - Swagger
