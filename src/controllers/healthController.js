@@ -1,6 +1,10 @@
 const { getHealthResponse } = require('../services/healthService')
 
-exports.getHealth = async (req, res) => {
+const getHealth = async (_req, res) => {
   const result = await getHealthResponse('')
-  res.send(result)
+  res.status(200).json(result)
+}
+
+module.exports = {
+  getHealth
 }
