@@ -6,7 +6,7 @@ const { messageErrorToken, messageErrorTokenInvalid } = require('./messagesError
 const SECRET = process.env.JWT_SECRET || 'suaSenhaSecreta'
 
 const jwtConfig = {
-  expiresIn: '60m',
+  expiresIn: '1d',
   algorithm: 'HS256'
 }
 

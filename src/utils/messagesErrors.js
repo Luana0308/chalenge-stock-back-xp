@@ -6,9 +6,12 @@ const messageErrorToken = { status: 401, message: 'Token not found' }
 
 const messageErrorTokenInvalid = { status: 401, message: 'Expired or invalid token' }
 
+const messageErrorAssetNotExist = { status: 404, message: 'Asset does not exist' }
+
 module.exports = {
   messageErrorMissingFields,
   messageErrorInvalidFields,
   messageErrorToken,
-  messageErrorTokenInvalid
+  messageErrorTokenInvalid,
+  messageErrorAssetNotExist
 }

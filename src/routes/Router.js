@@ -1,13 +1,15 @@
 require('express-async-errors')
 const express = require('express')
 const healthRouter = require('./healthRouter')
-const ClientRouter = require('./clientRouter')
+const clientRouter = require('./clientRouter')
+const assetRouter = require('./assetRouter')
 const erroInternal = require('../middleware/errorInternal')
 
 const routers = express.Router()
 
 routers.use('/health', healthRouter)
-routers.use('/login', ClientRouter)
+routers.use('/login', clientRouter)
+routers.use('/assets', assetRouter)
 
 routers.use(erroInternal)
 
