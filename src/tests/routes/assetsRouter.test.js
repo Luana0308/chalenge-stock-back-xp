@@ -20,15 +20,15 @@ describe('Assets route Tests', function () {
         dataValues: [
           {
             id: 1,
-            nameAssest: 'Magalu',
-            qtdAssests: 10,
-            valueAssest: '2.80'
+            nameAsset: 'Magalu',
+            qtdAssets: 10,
+            valueAsset: '2.80'
           },
           {
             id: 2,
             nameAssest: 'XP',
-            qtdAssests: 100,
-            valueAssest: '17.50'
+            qtdAssets: 100,
+            valueAsset: '17.50'
           }
         ]
       }

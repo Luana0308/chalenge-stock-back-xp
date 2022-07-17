@@ -13,8 +13,8 @@ const getByIdAsset = async (id) => {
 
   return {
     CodAtivo: asset.id,
-    QtdeAtivo: asset.qtdAssests,
-    Valor: asset.valueAssest
+    QtdeAtivo: asset.qtdAssets,
+    Valor: asset.valueAsset
   }
 }
 

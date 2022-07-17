@@ -19,6 +19,9 @@ module.exports = {
       password: {
         allowNull: false,
         type: Sequelize.STRING(20)
+      },
+      value: {
+        type: Sequelize.DECIMAL(10, 2)
       }
     })
   },

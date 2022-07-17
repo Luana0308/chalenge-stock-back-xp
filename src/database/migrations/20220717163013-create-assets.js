@@ -9,14 +9,14 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      nameAssest: {
+      nameAsset: {
         allowNull: false,
         type: Sequelize.STRING(50)
       },
-      qtdAssests: {
+      qtdAssets: {
         type: Sequelize.INTEGER
       },
-      valueAssest: {
+      valueAsset: {
         type: Sequelize.DECIMAL(10, 2)
       },
       createdAt: {
