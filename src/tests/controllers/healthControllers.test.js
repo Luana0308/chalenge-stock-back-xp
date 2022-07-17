@@ -8,10 +8,10 @@ describe('62536251', async () => {
   })
   it('should create', async () => {
     const mockResult = 'some response'
-    sinon.stub(service, 'getHealthResponse').resolves(mockResult)
-
     const mockRequest = { body: {} }
     const mockResponse = { send: sinon.stub() }
+
+    sinon.stub(service, 'getHealthResponse').resolves(mockResult)
 
     await controller.getHealth(mockRequest, mockResponse)
 
