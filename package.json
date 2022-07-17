@@ -9,7 +9,8 @@
     "format:write": "prettier --write .",
     "lint:check": "eslint .",
     "lint:fix": "eslint --fix .",
-    "dev": "nodemon ./src/index.js"
+    "dev": "nodemon ./src/index.js",
+    "test:coverage": "nyc mocha 'src/tests/**/*.js'"
   },
   "author": "",
   "license": "ISC",
@@ -26,6 +27,7 @@
     "husky": "^8.0.1",
     "mocha": "^10.0.0",
     "nodemon": "^2.0.19",
+    "nyc": "^15.1.0",
     "prettier": "^2.7.1",
     "sinon": "^14.0.0",
     "supertest": "^6.2.4"

@@ -1,21 +1,29 @@
 const controller = require('../../controllers/healthController')
 const service = require('../../services/healthService')
 const sinon = require('sinon')
+const { buildMockResponse } = require('../testUtils.js')
 
-describe('62536251', async () => {
-  afterEach(() => {
-    sinon.restore()
-  })
-  it('should create', async () => {
-    const mockResult = 'some response'
-    const mockRequest = { body: {} }
-    const mockResponse = { send: sinon.stub() }
+describe('Health Controller Tests', function () {
+  describe('get health response', function () {
+    beforeEach(function () {})
 
-    sinon.stub(service, 'getHealthResponse').resolves(mockResult)
+    afterEach(function () {
+      service.getHealthResponse.restore()
+    })
 
-    await controller.getHealth(mockRequest, mockResponse)
+    it('should return expected value', async function () {
+      const expectedResultJson = 'some response'
+      const expectedResultCode = 200
+      const serviceFunctionMocked = 'getHealthResponse'
 
-    sinon.assert.calledWith(mockResponse.send, 'some response')
-    // sinon.assert.calledWith(mReply.code, 201)
+      const mockReq = { body: {} }
+      const mockRes = buildMockResponse()
+
+      sinon.stub(service, serviceFunctionMocked).returns(expectedResultJson)
+      await controller.getHealth(mockReq, mockRes)
+
+      sinon.assert.calledWith(mockRes.json, expectedResultJson)
+      sinon.assert.calledWith(mockRes.status, expectedResultCode)
+    })
   })
 })

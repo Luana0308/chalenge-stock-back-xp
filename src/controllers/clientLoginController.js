@@ -1,10 +1,10 @@
-const clientLoginService = require('../services/clientLoginService')
+const service = require('../services/clientLoginService')
 
-const clientLoginController = async (req, res) => {
-  const tokenValid = await clientLoginService.authenticationLogin(req.body)
+const autheticationLogin = async (req, res) => {
+  const tokenValid = await service.authenticationLogin(req.body)
   res.status(200).json(tokenValid)
 }
 
 module.exports = {
-  clientLoginController
+  autheticationLogin
 }

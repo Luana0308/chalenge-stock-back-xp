@@ -1,7 +1,7 @@
-const { getHealthResponse } = require('../services/healthService')
+const healthService = require('../services/healthService')
 
-const getHealth = async (_req, res) => {
-  const result = await getHealthResponse('')
+const getHealth = async (req, res) => {
+  const result = await healthService.getHealthResponse(req.body)
   res.status(200).json(result)
 }
 
