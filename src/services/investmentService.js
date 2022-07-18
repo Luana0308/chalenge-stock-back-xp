@@ -1,26 +1,41 @@
-const { Transaction } = require('../database/models')
+const repository = require('../repositories/investmentRepository')
+const repositoryAsset = require('../repositories/assetRepository')
+const { messageErrorTransactionInvalid } = require('../utils/messagesErrors')
 
 const postInvestmentsbuy = async (token, investment) => {
   const { id } = token
   const { idAsset, qtAsset, type } = investment
 
-  //   await repository.findClientById(id)
+  const asset = await repositoryAsset.findAssetByPk(id)
 
-  await Transaction.create({
-    idClient: id,
-    idAsset,
-    qtAsset,
-    type,
-    createdAt: new Date()
-  })
+  if (qtAsset > asset.qtdAssets) { throw messageErrorTransactionInvalid }
 
-  return {
-    CodClient: id,
-    CodAtivo: idAsset,
-    qtdeAtivo: qtAsset
-  }
+  await repository.createTransaction(id, idAsset, qtAsset, type)
+
+  return { CodClient: id, CodAtivo: idAsset, qtdeAtivo: qtAsset }
 }
 
+const postInvestmentsSell = async (token, investment) => {
+  const { id } = token
+  const { idAsset, qtAsset, type } = investment
+
+  const assetsInformantions = await repository.getByAssetAndClient(id, idAsset)
+  const currentquantityAsset = calculateAssestByUser(assetsInformantions)
+
+  if (qtAsset > currentquantityAsset) { throw messageErrorTransactionInvalid }
+
+  await repository.createTransaction(id, idAsset, qtAsset, type)
+
+  return { CodClient: id, CodAtivo: idAsset, qtdeAtivo: qtAsset }
+}
+
+const calculateAssestByUser = (assetsInformantions) => {
+  return assetsInformantions.reduce((acc, atual) => {
+    const result = atual.type === 'compra' ? +atual.qtAsset : atual.qtAsset * -1
+    return result + acc
+  }, 0)
+}
 module.exports = {
-  postInvestmentsbuy
+  postInvestmentsbuy,
+  postInvestmentsSell
 }

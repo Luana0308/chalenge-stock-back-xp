@@ -5,6 +5,12 @@ const postInvestmentsbuy = async (req, res) => {
   res.status(201).json(result)
 }
 
+const postInvestmentsSell = async (req, res) => {
+  const result = await service.postInvestmentsSell(res.locals.payload, req.body)
+  res.status(201).json(result)
+}
+
 module.exports = {
-  postInvestmentsbuy
+  postInvestmentsbuy,
+  postInvestmentsSell
 }

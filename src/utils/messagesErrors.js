@@ -12,6 +12,8 @@ const messageErrorValueInvalid = { status: 400, message: 'value must be at least
 
 const messageErrorWithdrawInvalid = { status: 401, message: 'unauthorized withdrawal' }
 
+const messageErrorTransactionInvalid = { status: 401, message: 'transaction not authorized ' }
+
 module.exports = {
   messageErrorMissingFields,
   messageErrorInvalidFields,
@@ -19,5 +21,6 @@ module.exports = {
   messageErrorTokenInvalid,
   messageErrorAssetNotExist,
   messageErrorValueInvalid,
-  messageErrorWithdrawInvalid
+  messageErrorWithdrawInvalid,
+  messageErrorTransactionInvalid
 }
