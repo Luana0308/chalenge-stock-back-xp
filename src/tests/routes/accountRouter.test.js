@@ -1,13 +1,16 @@
-const app = require('../../app')
 const request = require('supertest')
 const sinon = require('sinon')
-const { authToken } = require('../../middleware/authToken')
 const repository = require('../../repositories/accountRepository')
 
-describe('Assets route Tests', function () {
+// setup midleware
+const middleware = require('../../middleware/authToken')
+sinon.stub(middleware, 'authToken')
+const app = require('../../app')
+
+describe('Account route Tests', function () {
   describe('GET /account/:id', function () {
     beforeEach(function () {
-      sinon.stub(authToken).returns((req, res, next) => next())
+      middleware.authToken.callsFake((req, res, next) => next())
     })
     afterEach(function () {
       repository.findClientById.restore()
