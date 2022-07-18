@@ -1,4 +1,4 @@
-const ClientShema = (sequelize, DataTypes) => {
+const ClientSchema = (sequelize, DataTypes) => {
   const ClientTable = sequelize.define('Client', {
     id: { type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true },
     name: DataTypes.STRING,
@@ -12,4 +12,4 @@ const ClientShema = (sequelize, DataTypes) => {
   return ClientTable
 }
 
-module.exports = ClientShema
+module.exports = ClientSchema

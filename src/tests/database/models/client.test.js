@@ -5,7 +5,7 @@ const {
 
 const ClientModel = require('../../../database/models/client')
 
-describe('src/models/Simple', () => {
+describe('src/models/Client', () => {
   const Model = ClientModel(sequelize, dataTypes)
   const instance = new Model()
   const properties = ['id', 'name', 'email', 'password', 'value']
