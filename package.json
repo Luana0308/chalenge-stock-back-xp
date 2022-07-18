@@ -11,7 +11,10 @@
     "lint:fix": "eslint --fix .",
     "dev": "nodemon ./src/index.js",
     "test:coverage": "nyc mocha 'src/tests/**/*.js'",
-    "swagger:autogen": "node swagger.js"
+    "swagger:autogen": "node swagger.js",
+    "docker:build": "docker build -t stock-challenge-back-end-xp .",
+    "docker:run": "docker run -p 3001:3001 -d stock-challenge-back-end-xp",
+    "ci:test": "docker run -e CI=true stock-challenge-back-end-xp npm run test"
   },
   "author": "",
   "license": "ISC",
