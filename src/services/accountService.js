@@ -32,11 +32,9 @@ const postWithdrawClient = async (token, deposit) => {
 
 const postDepositClient = async (token, deposit) => {
   const { id } = token
-  console.log('id do token', id)
   const { value } = deposit
 
   const client = await repository.findClientById(id)
-
   const some = +client.value + +value
 
   await Client.update({ id, value: some }, { where: { id } })

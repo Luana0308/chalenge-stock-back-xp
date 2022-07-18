@@ -7,7 +7,7 @@ const AssetShema = (sequelize, DataTypes) => {
   })
 
   AssetTable.associate = (models) => {
-    AssetTable.hasMany(models.transaction,
+    AssetTable.hasMany(models.Transaction,
       { foreignKey: 'idAsset', as: 'transaction' })
   }
 

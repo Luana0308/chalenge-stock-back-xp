@@ -11,7 +11,6 @@ module.exports = {
       idClient: {
         allowNull: false,
         type: Sequelize.INTEGER,
-        onUpdate: 'CASCADE',
         onDelete: 'CASCADE',
         references: {
           model: 'Clients',
@@ -21,7 +20,6 @@ module.exports = {
       idAsset: {
         allowNull: false,
         type: Sequelize.INTEGER,
-        onUpdate: 'CASCADE',
         onDelete: 'CASCADE',
         references: {
           model: 'Assets',

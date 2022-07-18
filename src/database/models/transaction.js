@@ -5,7 +5,7 @@ const transactionShema = (sequelize, DataTypes) => {
     idAsset: { type: DataTypes.INTEGER, foreignKey: true },
     qtAsset: DataTypes.INTEGER,
     type: DataTypes.STRING
-  })
+  }, { timestamps: false })
 
   transactionTable.associate = (models) => {
     transactionTable.belongsTo(models.Client,
@@ -13,7 +13,7 @@ const transactionShema = (sequelize, DataTypes) => {
   }
 
   transactionTable.associate = (models) => {
-    transactionTable.belongsTo(models.Asset,
+    transactionTable.belongsTo(models.Assets,
       { foreignKey: 'idAsset', as: 'asset' })
   }
 
