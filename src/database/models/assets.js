@@ -6,6 +6,11 @@ const AssetShema = (sequelize, DataTypes) => {
     valueAsset: DataTypes.DECIMAL
   })
 
+  AssetTable.associate = (models) => {
+    AssetTable.hasMany(models.transaction,
+      { foreignKey: 'idAsset', as: 'transaction' })
+  }
+
   return AssetTable
 }
 
