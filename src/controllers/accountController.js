@@ -8,11 +8,17 @@ const getByIdClientValue = async (req, res) => {
 
 const postDepositClient = async (req, res) => {
   const result = await service.postDepositClient(res.locals.payload, req.body)
-  res.status(200).json(result)
+  res.status(201).json(result)
+}
+
+const postWithdrawClient = async (req, res) => {
+  const result = await service.postWithdrawClient(res.locals.payload, req.body)
+  res.status(201).json(result)
 }
 
 module.exports = {
   getByIdClientValue,
-  postDepositClient
+  postDepositClient,
+  postWithdrawClient
 
 }

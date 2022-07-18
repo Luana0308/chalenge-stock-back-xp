@@ -10,11 +10,14 @@ const messageErrorAssetNotExist = { status: 404, message: 'Asset does not exist'
 
 const messageErrorValueInvalid = { status: 400, message: 'value must be at least greater than 0' }
 
+const messageErrorWithdrawInvalid = { status: 401, message: 'unauthorized withdrawal' }
+
 module.exports = {
   messageErrorMissingFields,
   messageErrorInvalidFields,
   messageErrorToken,
   messageErrorTokenInvalid,
   messageErrorAssetNotExist,
-  messageErrorValueInvalid
+  messageErrorValueInvalid,
+  messageErrorWithdrawInvalid
 }
