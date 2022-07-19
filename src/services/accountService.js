@@ -26,7 +26,9 @@ const postWithdrawClient = async (token, deposit) => {
 
   return {
     CodClient: id,
-    valor: value
+    nome: client.name,
+    valorSaque: value,
+    valorAtualConta: withdraw
   }
 }
 
@@ -41,7 +43,9 @@ const postDepositClient = async (token, deposit) => {
 
   return {
     CodClient: id,
-    valor: value
+    nome: client.name,
+    valor: value,
+    valorAtualConta: some
   }
 }
 

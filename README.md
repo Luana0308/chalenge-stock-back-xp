@@ -104,6 +104,9 @@
      
 https://github.com/goldbergyoni/nodebestpractices/blob/master/README.brazilian-portuguese.md#3-pr%C3%A1ticas-de-estilo-de-c%C3%B3digo
 
+
+https://dev.to/vitordevsp/padronizacao-de-commit-com-commitlint-husky-e-commitizen-3g1n
+
 <br />
 </details>
 
@@ -169,3 +172,4 @@ https://github.com/goldbergyoni/nodebestpractices/blob/master/README.brazilian-p
 
 <br />
 </details>
+

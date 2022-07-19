@@ -13,7 +13,7 @@ const createTransaction = async (id, idAsset, qtAsset, type) => {
 const getByAssetAndClient = async (idClient, idAsset) => {
   const result = await model.Transaction.findAll({
     where: {
-      idClient: 2,
+      idClient,
       idAsset
     }
   })

@@ -12,7 +12,7 @@ const postInvestmentsbuy = async (token, investment) => {
 
   await repository.createTransaction(id, idAsset, qtAsset, type)
 
-  return { CodClient: id, CodAtivo: idAsset, qtdeAtivo: qtAsset }
+  return { CodClient: id, CodAtivo: idAsset, qtdeAtivo: qtAsset, tipo: type }
 }
 
 const postInvestmentsSell = async (token, investment) => {
@@ -26,7 +26,7 @@ const postInvestmentsSell = async (token, investment) => {
 
   await repository.createTransaction(id, idAsset, qtAsset, type)
 
-  return { CodClient: id, CodAtivo: idAsset, qtdeAtivo: qtAsset }
+  return { CodClient: id, CodAtivo: idAsset, qtdeAtivo: qtAsset, tipo: type }
 }
 
 const calculateAssestByUser = (assetsInformantions) => {
