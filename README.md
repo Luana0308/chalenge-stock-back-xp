@@ -104,6 +104,9 @@
      
 https://github.com/goldbergyoni/nodebestpractices/blob/master/README.brazilian-portuguese.md#3-pr%C3%A1ticas-de-estilo-de-c%C3%B3digo
 
+https://github.com/conventional-changelog/commitlint
+
+https://medium.com/linkapi-solutions/conventional-commits-pattern-3778d1a1e657
 
 https://dev.to/vitordevsp/padronizacao-de-commit-com-commitlint-husky-e-commitizen-3g1n
 
@@ -123,6 +126,10 @@ https://dev.to/vitordevsp/padronizacao-de-commit-com-commitlint-husky-e-commitiz
   
    https://github.com/mysticatea/eslint-plugin-node/blob/master/docs/rules/no-missing-import.md
 
+   https://dev.to/drsimplegraffiti/eslint-configuration-for-node-project-275l
+
+   https://blog.bitsrc.io/how-to-set-up-node-js-application-with-eslint-and-prettier-b1b7994db69f
+
 <br />
 </details>
 
@@ -132,6 +139,23 @@ https://dev.to/vitordevsp/padronizacao-de-commit-com-commitlint-husky-e-commitiz
   https://stackoverflow.com/a/60492240
   
   https://mochajs.org/#installation
+
+  https://www.npmjs.com/package/sinon
+
+  https://www.npmjs.com/package/mocha
+
+  https://jonathanwatsonwebdevelopment.medium.com/how-to-unit-test-express-controllers-with-mocha-and-chai-5cb425c5c7db
+
+  https://stackoverflow.com/questions/39747397/how-to-use-sinon-js-with-express-js-unit-testing
+
+  https://www.npmjs.com/package/supertest
+
+  https://sinonjs.org/how-to/stub-dependency/
+
+  https://stackoverflow.com/questions/48931815/sinon-stub-not-replacing-function
+
+  https://sinonjs.org/releases/latest/stubs/
+
 
 <br />
 </details>
@@ -173,3 +197,4 @@ https://dev.to/vitordevsp/padronizacao-de-commit-com-commitlint-husky-e-commitiz
 <br />
 </details>
 
+https://www.npmjs.com/package/express-async-errors
