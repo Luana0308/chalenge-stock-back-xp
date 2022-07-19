@@ -1,4 +1,5 @@
 const repository = require('../repositories/assetRepository')
+const repositoryInvestment = require('../repositories/investmentRepository')
 const { messageErrorAssetNotExist } = require('../utils/messagesErrors')
 
 const getByAllAsset = async () => {
@@ -19,7 +20,13 @@ const getByIdAsset = async (id) => {
   }
 }
 
+const getAssetByIdClient = async (id) => {
+  const client = await repositoryInvestment.getByIdClient(id)
+  return client
+}
+
 module.exports = {
   getByIdAsset,
-  getByAllAsset
+  getByAllAsset,
+  getAssetByIdClient
 }

@@ -21,7 +21,19 @@ const getByAssetAndClient = async (idClient, idAsset) => {
   return result.map((item) => item.dataValues)
 }
 
+const getByIdClient = async (idClient) => {
+  const result = await model.Transaction.findAll({
+    where: {
+      idClient,
+      type: 'compra'
+    }
+  })
+
+  return result
+}
+
 module.exports = {
   createTransaction,
-  getByAssetAndClient
+  getByAssetAndClient,
+  getByIdClient
 }
