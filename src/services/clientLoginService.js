@@ -13,7 +13,7 @@ const authenticationLogin = async ({ email, password }) => {
   }
 
   const token = generateJWTToken(userLogin.dataValues)
-  return { token }
+  return { token, id: userLogin.id }
 }
 
 module.exports = {
