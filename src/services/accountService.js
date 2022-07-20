@@ -4,10 +4,7 @@ const { messageErrorWithdrawInvalid } = require('../utils/messagesErrors')
 
 const getByIdClientValue = async (id) => {
   const client = await repository.findClientById(id)
-  return {
-    CodClient: client.id,
-    Saldo: +client.value
-  }
+  return client
 }
 
 const postWithdrawClient = async (token, deposit) => {
