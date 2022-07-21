@@ -6,11 +6,11 @@
 
 <details>
   <summary><strong>O que é o projeto?</strong></summary>
-    O projeto é uma aplicação backEnd, desenvolvida para o desafio técnico da XP. 
+  O projeto é uma aplicação backEnd, desenvolvida para o desafio técnico da XP. 
      
-   O meu projeto possui uma Application Programming Interface-API REST, sendo que o objetivo de uma API é disponilizar dados para que outros sistemas possam utilizar, ou seja o backEnd gerencia os dados do banco de dados e fornece ao frontEnd, atraves das requisições HTTP. 
+  O meu projeto possui uma Application Programming Interface-API, sendo que o objetivo de uma API é disponilizar dados para que outros sistemas possam utilizar, ou seja o backEnd gerencia os dados do banco de dados e fornece ao frontEnd, atraves das requisições HTTP. 
      
-  E com as arquitetura REST é feito a separação da responsabilidade do usuario e do servidor, pois toda a comunicação é feita através dos endpoints e na minha aplicação também foi feita a utlização de token que visa a segurança no acesso e na manipulação dos dados disponbilizados, o que é muito importante por se tratar de uma aplicação financeira. E eu escolhi ese modelo pois além de fazer as separações de cliente-servidor e trazer mais segurança, também é uma aplicação que permite escalabilidade. 
+  E com as arquitetura REST é feito a separação da responsabilidade do usuario e do servidor, pois toda a comunicação é feita através dos endpoints e na minha aplicação também foi feita a utlização de token que visa a segurança no acesso e na manipulação dos dados disponbilizados, o que é muito importante por se tratar de uma aplicação financeira. E eu escolhi ese modelo pois além de fazer as separações de cliente-servidor traz mais segurança.
 
 <br />
 </details>
@@ -71,6 +71,13 @@
 ## 📍 Informações sobre o projeto
 
 <details>
+  <summary><strong>Cobertura dos testes</strong></summary>
+     
+
+<br />
+</details>
+
+<details>
   <summary><strong>Arquitetura Utilizada</strong></summary>
      
 
@@ -79,7 +86,7 @@
 
 <details>
   <summary><strong>Porque utilizei o docker</strong></summary>
-     
+    
 
 <br />
 </details>
@@ -92,7 +99,42 @@
 </details>
 
 <details>
-  <summary><strong>Porque utilizei a Padronização de lint</strong></summary>
+  <summary><strong>Porque utilizei o Heroku</strong></summary>
+     
+
+<br />
+</details>
+
+<details>
+  <summary><strong>Porque utilizei o ESlint/Prettier e CommitLint </strong></summary>
+
+  Utilizei a padronização com o ESLint, pois ele é uma otima ferramente que busca identrifcar os erros do padrão de codigo de acordo com aquilo que defini, e isso ajuda muito a manter um codigo mais organizado. 
+
+  E para ajudar a manter esses padroes que defini eu coloquei o prettier que formata o meu codigo de acordo com essas regras. 
+
+  E ainda pensando em padronização utilizei também o commitLint, que respeita as especificações do conventional Commits e dessa forma fica muito mais facil identificar o que foi realizado durante o desenvolvimento. 
+
+<br />
+</details>
+
+<details>
+  <summary><strong>Porque utilizei o Cors</strong></summary>
+     
+
+<br />
+</details>
+
+<details>
+  <summary><strong>Porque utilizei a verificação com JWT</strong></summary>
+     
+
+<br />
+</details>
+
+
+
+<details>
+  <summary><strong>Dificuldades Enfrentadas</strong></summary>
      
 
 <br />
