@@ -6,7 +6,11 @@
 
 <details>
   <summary><strong>O que é o projeto?</strong></summary>
+    O projeto é uma aplicação backEnd, desenvolvida para o desafio técnico da XP. 
      
+   O meu projeto possui uma Application Programming Interface-API REST, sendo que o objetivo de uma API é disponilizar dados para que outros sistemas possam utilizar, ou seja o backEnd gerencia os dados do banco de dados e fornece ao frontEnd, atraves das requisições HTTP. 
+     
+  E com as arquitetura REST é feito a separação da responsabilidade do usuario e do servidor, pois toda a comunicação é feita através dos endpoints e na minha aplicação também foi feita a utlização de token que visa a segurança no acesso e na manipulação dos dados disponbilizados, o que é muito importante por se tratar de uma aplicação financeira. E eu escolhi ese modelo pois além de fazer as separações de cliente-servidor e trazer mais segurança, também é uma aplicação que permite escalabilidade. 
 
 <br />
 </details>
