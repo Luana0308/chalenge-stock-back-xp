@@ -14,6 +14,20 @@ module.exports = {
         codAsset: 'XPBR31',
         quantityAsset: 100,
         valueAsset: 17.5
+      },
+      {
+        id: 3,
+        nameAsset: 'Magalu',
+        codAsset: 'MGL03',
+        quantityAsset: 100,
+        valueAsset: 12.0
+      },
+      {
+        id: 4,
+        nameAsset: 'Apple',
+        codAsset: 'APL01',
+        quantityAsset: 100,
+        valueAsset: 100.0
       }
       ])
   },
