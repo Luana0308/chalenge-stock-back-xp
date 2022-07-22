@@ -1,26 +1,33 @@
 'use strict'
 module.exports = {
   async up (queryInterface, Sequelize) {
-    await queryInterface.createTable('Assets', {
+    await queryInterface.createTable('BuyInvestments', {
       id: {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      nameAsset: {
+      idClient: {
         allowNull: false,
-        type: Sequelize.STRING(50)
+        type: Sequelize.INTEGER,
+        references: {
+          model: 'Clients',
+          key: 'id'
+        }
       },
-      codAsset: {
+      idAsset: {
         allowNull: false,
-        type: Sequelize.STRING(50)
+        type: Sequelize.INTEGER,
+        onDelete: 'CASCADE',
+        references: {
+          model: 'Assets',
+          key: 'id'
+        }
       },
-      qtdAssets: {
+      quantityAsset: {
+        allowNull: false,
         type: Sequelize.INTEGER
-      },
-      valueAsset: {
-        type: Sequelize.DECIMAL(10, 2)
       },
       createdAt: {
         allowNull: false,
@@ -35,6 +42,6 @@ module.exports = {
     })
   },
   async down (queryInterface, Sequelize) {
-    await queryInterface.dropTable('Assets')
+    await queryInterface.dropTable('BuyInvestments')
   }
 }
