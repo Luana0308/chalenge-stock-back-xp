@@ -8,7 +8,7 @@ const findAsset = async () => {
 
 const findAssetByPk = async (id) => {
   return await model.Assets.findByPk(id, {
-    attributes: ['id', 'qtdAssets', 'valueAsset']
+    attributes: ['id', 'nameAsset', 'qtdAssets', 'valueAsset']
   })
 }
 
