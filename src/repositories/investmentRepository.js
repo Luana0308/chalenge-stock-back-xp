@@ -24,9 +24,13 @@ const getByAssetAndClient = async (idClient, idAsset) => {
 const getByIdClient = async (idClient) => {
   const result = await model.Transaction.findAll({
     where: {
-      idClient,
-      type: 'compra'
-    }
+      idClient
+    },
+    include: [{
+      model: model.Assets,
+      as: 'asset',
+      required: true
+    }]
   })
 
   return result
