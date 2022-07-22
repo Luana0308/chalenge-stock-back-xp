@@ -1,7 +1,6 @@
 const model = require('../database/models')
 
 const createInvestment = async (id, idAsset, quantityAsset) => {
-  console.log('oiiii')
   return await model.BuyInvestment.create({
     idClient: id,
     idAsset,
@@ -12,7 +11,6 @@ const createInvestment = async (id, idAsset, quantityAsset) => {
 }
 
 const getByAssetAndClient = async (idClient, idAsset) => {
-  console.log(idClient, idAsset)
   const result = await model.BuyInvestment.findOne({
     where: {
       idClient,
@@ -37,16 +35,11 @@ const updateByAssetAndClient = async (idClient, idAsset, newValue) => {
   return result
 }
 
-const getByIdClient = async (idClient) => {
-  const result = await model.Transaction.findAll({
+const getByClientId = async (idClient) => {
+  const result = await model.BuyInvestment.findAll({
     where: {
       idClient
-    },
-    include: [{
-      model: model.Assets,
-      as: 'asset',
-      required: true
-    }]
+    }
   })
 
   return result
@@ -55,6 +48,6 @@ const getByIdClient = async (idClient) => {
 module.exports = {
   createInvestment,
   getByAssetAndClient,
-  getByIdClient,
+  getByClientId,
   updateByAssetAndClient
 }

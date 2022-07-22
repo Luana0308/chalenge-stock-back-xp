@@ -5,6 +5,6 @@ const router = express.Router()
 
 router.get('/', controller.getByAllAsset)
 router.get('/:id', controller.getByIdAsset)
-router.get('/client/:id', controller.getAssetByIdClient)
+router.get('/client/:id', controller.getAssetByClientId)
 
 module.exports = router

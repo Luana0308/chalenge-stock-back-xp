@@ -6,7 +6,7 @@ const { messageErrorTransactionInvalid } = require('../utils/messagesErrors')
 
 const postInvestmentsbuy = async (token, investment) => {
   const { id } = token
-  const { idAsset, quantityAsset, type } = investment
+  const { idAsset, quantityAsset } = investment
 
   const brokerAssets = await repositoryAsset.findAssetByPk(idAsset)
   const accountClient = await repositoryClient.findClientById(id)
@@ -22,7 +22,7 @@ const postInvestmentsbuy = async (token, investment) => {
   await buyAsset(id, idAsset, quantityAsset)
   await updateBrokerAssetQuantity(idAsset, brokerAssets.quantityAsset, quantityAsset)
   await updateClientAccount(id, brokerAssets.valueAsset, quantityAsset, accountClient.value)
-  await repositoryTransaction.createTransaction(id, idAsset, quantityAsset, type)
+  await repositoryTransaction.createTransaction(id, idAsset, quantityAsset, 'compra')
 
   return await repositoryInvestment.getByAssetAndClient(id, idAsset)
 }

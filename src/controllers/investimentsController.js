@@ -1,12 +1,13 @@
-const service = require('../services/buyInvestmentService')
+const serviceBuy = require('../services/investmentBuyService')
+const serviceSell = require('../services/investmentSellService')
 
 const postInvestmentsbuy = async (req, res) => {
-  const result = await service.postInvestmentsbuy(res.locals.payload, req.body)
+  const result = await serviceBuy.postInvestmentsbuy(res.locals.payload, req.body)
   res.status(201).json(result)
 }
 
 const postInvestmentsSell = async (req, res) => {
-  const result = await service.postInvestmentsSell(res.locals.payload, req.body)
+  const result = await serviceSell.postInvestmentsSell(res.locals.payload, req.body)
   res.status(201).json(result)
 }
 

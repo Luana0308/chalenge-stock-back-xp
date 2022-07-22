@@ -11,14 +11,14 @@ const getByIdAsset = async (req, res) => {
   res.status(200).json(result)
 }
 
-const getAssetByIdClient = async (req, res) => {
+const getAssetByClientId = async (req, res) => {
   const { id } = req.params
-  const result = await service.getAssetByIdClient(id)
+  const result = await service.getAssetByClientId(id)
   res.status(200).json(result)
 }
 
 module.exports = {
   getByIdAsset,
   getByAllAsset,
-  getAssetByIdClient
+  getAssetByClientId
 }
