@@ -12,12 +12,7 @@ const getByIdAsset = async (id) => {
 
   if (!asset) { throw messageErrorAssetNotExist }
 
-  return {
-    CodAtivo: asset.id,
-    nomeAtivo: asset.nameAsset,
-    QtdeAtivo: asset.qtdAssets,
-    Valor: asset.valueAsset
-  }
+  return asset
 }
 
 const getAssetByIdClient = async (id) => {
