@@ -4,7 +4,9 @@ WORKDIR /app
 
 COPY . .
 
-RUN npm install
+RUN npm install 
+
+RUN npm run sequelize:start
 
 EXPOSE $PORT
 
