@@ -3,13 +3,18 @@ const AssetShema = (sequelize, DataTypes) => {
     id: { type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true },
     nameAsset: DataTypes.STRING,
     codAsset: DataTypes.STRING,
-    qtdAssets: DataTypes.INTEGER,
+    quantityAsset: DataTypes.INTEGER,
     valueAsset: DataTypes.DECIMAL
   })
 
   AssetTable.associate = (models) => {
     AssetTable.hasMany(models.BuyInvestment,
       { foreignKey: 'idAsset', as: 'BuyInvestment' })
+  }
+
+  AssetTable.associate = (models) => {
+    AssetTable.hasMany(models.Transaction,
+      { foreignKey: 'idAsset', as: 'transaction' })
   }
 
   return AssetTable

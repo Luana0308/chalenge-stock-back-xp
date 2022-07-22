@@ -26,7 +26,7 @@ module.exports = {
           key: 'id'
         }
       },
-      qtAsset: {
+      quantityAsset: {
         type: Sequelize.INTEGER
       },
       type: {

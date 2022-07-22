@@ -21,13 +21,13 @@ describe('Assets route Tests', function () {
           {
             id: 1,
             nameAsset: 'Magalu',
-            qtdAssets: 10,
+            quantityAsset: 10,
             valueAsset: '2.80'
           },
           {
             id: 2,
             nameAssest: 'XP',
-            qtdAssets: 100,
+            quantityAsset: 100,
             valueAsset: '17.50'
           }
         ]

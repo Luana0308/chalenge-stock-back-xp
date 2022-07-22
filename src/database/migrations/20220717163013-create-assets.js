@@ -16,7 +16,7 @@ module.exports = {
         allowNull: false,
         type: Sequelize.STRING(50)
       },
-      qtdAssets: {
+      quantityAsset: {
         type: Sequelize.INTEGER
       },
       valueAsset: {

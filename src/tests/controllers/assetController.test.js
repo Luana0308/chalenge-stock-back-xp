@@ -16,13 +16,13 @@ describe('Assets Controller Tests', function () {
         {
           id: 1,
           nameAssest: 'Magalu',
-          qtdAssests: 10,
+          quantityAsset: 10,
           valueAssest: '2.80'
         },
         {
           id: 2,
           nameAssest: 'XP',
-          qtdAssests: 100,
+          quantityAsset: 100,
           valueAssest: '17.50'
         }
       ]

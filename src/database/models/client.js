@@ -14,6 +14,11 @@ const ClientSchema = (sequelize, DataTypes) => {
       { foreignKey: 'idClient', as: 'BuyInvestment' })
   }
 
+  ClientTable.associate = (models) => {
+    ClientTable.hasMany(models.Transaction,
+      { foreignKey: 'idClient', as: 'Transaction' })
+  }
+
   return ClientTable
 }
 

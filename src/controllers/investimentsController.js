@@ -1,4 +1,4 @@
-const service = require('../services/investmentService')
+const service = require('../services/buyInvestmentService')
 
 const postInvestmentsbuy = async (req, res) => {
   const result = await service.postInvestmentsbuy(res.locals.payload, req.body)
