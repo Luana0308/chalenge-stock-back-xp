@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node src/index.js",
+    "start": "npm run sequelize:start && node src/index.js",
     "test": "mocha 'src/tests/**/*.js'",
     "format:check": "prettier --check",
     "format:write": "prettier --write .",
@@ -17,7 +17,7 @@
     "sequelize:start": "npx sequelize db:create && npx sequelize db:migrate",
     "swagger:autogen": "node swagger.js",
     "docker:build": "docker build -t stock-challenge-back-end-xp .",
-    "docker:run": "docker run -p 3001:3001 -d stock-challenge-back-end-xp",
+    "docker:run": "docker run -p 3001:3001 -d stock-challenge-back-end-xp ",
     "ci:test": "docker run -e CI=true stock-challenge-back-end-xp npm run test"
   },
   "author": "",
