@@ -39,7 +39,12 @@ const getByClientId = async (idClient) => {
   const result = await model.BuyInvestment.findAll({
     where: {
       idClient
-    }
+    },
+    include: [{
+      model: model.Asset,
+      as: 'asset',
+      required: true
+    }]
   })
 
   return result
