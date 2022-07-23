@@ -2,13 +2,13 @@ const model = require('../database/models')
 
 const findAsset = async () => {
   return await model.Asset.findAll({
-    attributes: ['id', 'nameAsset', 'quantityAsset', 'valueAsset']
+    attributes: ['id', 'nameAsset', 'codAsset', 'quantityAsset', 'valueAsset']
   })
 }
 
 const findAssetByPk = async (id) => {
   return await model.Asset.findByPk(id, {
-    attributes: ['id', 'nameAsset', 'quantityAsset', 'valueAsset']
+    attributes: ['id', 'nameAsset', 'codAsset', 'quantityAsset', 'valueAsset']
   })
 }
 
