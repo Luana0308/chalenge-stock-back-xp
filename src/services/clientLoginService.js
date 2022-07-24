@@ -1,6 +1,6 @@
 const repository = require('../repositories/clientRepository')
 const { generateJWTToken } = require('../utils/token')
-const { messageErrorMissingFields, messageErrorInvalidFields } = require('../utils/messagesErrors')
+const { messageErrorMissingFields, messageErrorInvalidClient } = require('../utils/messagesErrors')
 
 const authenticationLogin = async ({ email, password }) => {
   if (!email || !password) {
@@ -9,7 +9,7 @@ const authenticationLogin = async ({ email, password }) => {
   const userLogin = await repository.findOneClient(email, password)
 
   if (!userLogin) {
-    throw messageErrorInvalidFields
+    throw messageErrorInvalidClient
   }
 
   const token = generateJWTToken(userLogin.dataValues)
