@@ -12,7 +12,9 @@ const postInvestmentsSell = async (token, investment) => {
   const brokerAssets = await repositoriesAsset.findAssetByPk(idAsset)
   const clientAccount = await repositoriesClient.findClientById(id)
 
-  validateClienthasQuantityAsset(quantityAsset, clientAsset)
+  if (validateClienthasQuantityAsset(quantityAsset, clientAsset)) {
+    throw messageErrorTransactionInvalid
+  }
 
   await sellAsset(clientAsset, quantityAsset, id, idAsset)
   await updateBrokerAssetQuantity(quantityAsset, brokerAssets, idAsset)
@@ -40,9 +42,7 @@ const sellAsset = async (clientAsset, quantityAsset, id, idAsset) => {
 }
 
 const validateClienthasQuantityAsset = async (quantityAsset, clientAsset) => {
-  if (quantityAsset > clientAsset.quantityAsset) {
-    throw messageErrorTransactionInvalid
-  }
+  return quantityAsset > clientAsset.quantityAsset
 }
 
 module.exports = {
