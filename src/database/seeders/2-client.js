@@ -6,14 +6,14 @@ module.exports = {
         name: 'luana Ferreira',
         email: 'luana@gmail.com',
         password: '123456',
-        value: 100.20
+        value: 5000.20
       },
       {
         id: 2,
         name: 'tony Stark',
         email: 'tony@gmail.com',
         password: '123456',
-        value: 100.00
+        value: 1000.00
       }
       ], { timestamps: false })
   },
